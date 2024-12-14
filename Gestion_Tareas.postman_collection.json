@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "4d790830-e35a-4f68-a5d0-c6c1b0e5ad21",
+		"name": "Gestion_Tareas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11000931"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Get All Usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NzY3NiwiZXhwIjoxNzM0MTk5MTE2fQ.LJorXBBmt97DqDMRKOlkGObQkYltxNBaHR7omPWDHEo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Post Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NzY3NiwiZXhwIjoxNzM0MTk5MTE2fQ.LJorXBBmt97DqDMRKOlkGObQkYltxNBaHR7omPWDHEo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identificacion\":\"1234567890\",\r\n    \"nombres\":\"Jimmy RIcardo\",\r\n    \"apellidos\":\"Delgado Muñoz\",\r\n    \"edad\":28,\r\n    \"cargo\":\"Desarrollador\",\r\n    \"estado\":\"true\",\r\n    \"nickusuario\":\"JimmyRic\",\r\n    \"password\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Put Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NzY3NiwiZXhwIjoxNzM0MTk5MTE2fQ.LJorXBBmt97DqDMRKOlkGObQkYltxNBaHR7omPWDHEo"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \r\n        \"identificacion\": \"1234567890\",\r\n        \"nombres\": \"Jimmy RIca\",\r\n        \"apellidos\": \"Delgado Muñoz\",\r\n        \"edad\": 40,\r\n        \"cargo\": \"afdf\",\r\n        \"estado\": \"true\",\r\n        \"password\": \"9874\",\r\n        \"nickusuario\": \"JimmyRic\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/usuarios/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NzY3NiwiZXhwIjoxNzM0MTk5MTE2fQ.LJorXBBmt97DqDMRKOlkGObQkYltxNBaHR7omPWDHEo"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/usuarios/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NzY3NiwiZXhwIjoxNzM0MTk5MTE2fQ.LJorXBBmt97DqDMRKOlkGObQkYltxNBaHR7omPWDHEo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/usuarios/5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarea",
+			"item": [
+				{
+					"name": "Get All Tareas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NzY3NiwiZXhwIjoxNzM0MTk5MTE2fQ.LJorXBBmt97DqDMRKOlkGObQkYltxNBaHR7omPWDHEo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/tareas"
+					},
+					"response": []
+				},
+				{
+					"name": "Post Tarea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NjEzMSwiZXhwIjoxNzM0MTk3NTcxfQ.NeCZv79uXCqCqDvdMaKIDkYpMrzUzCqBjlnfC5C0j7E"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"codigoTarea\": \"TAREA-001\",\r\n  \"titulo\": \"Diseñar la arquitectura del sistema\",\r\n  \"descripcion\": \"Crear y documentar la arquitectura de microservicios del sistema de gestión de tareas.\",\r\n  \"criteriosAceptacion\": \"Debe incluir un API Gateway, comunicación asíncrona y ser escalable.\",\r\n  \"fechaInicio\": \"2024-12-15\",\r\n  \"fechaFinalizacion\": \"2024-12-17\",\r\n  \"tiempoDesarrollo\": \"48H\",\r\n  \"estadoTarea\": \"Done\",\r\n  \"estado\": \"ACTIVO\",\r\n  \"usuario\": {\r\n    \"idUsuario\": 2\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/tareas"
+					},
+					"response": []
+				},
+				{
+					"name": "Get  by ID Tarea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NjEzMSwiZXhwIjoxNzM0MTk3NTcxfQ.NeCZv79uXCqCqDvdMaKIDkYpMrzUzCqBjlnfC5C0j7E"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/tareas/18"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tarea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NjEzMSwiZXhwIjoxNzM0MTk3NTcxfQ.NeCZv79uXCqCqDvdMaKIDkYpMrzUzCqBjlnfC5C0j7E"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/tareas/24"
+					},
+					"response": []
+				},
+				{
+					"name": "Put Tarea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NjEzMSwiZXhwIjoxNzM0MTk3NTcxfQ.NeCZv79uXCqCqDvdMaKIDkYpMrzUzCqBjlnfC5C0j7E"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \"codigoTarea\": \"TAREA-023\",\r\n  \"titulo\": \"Diseñar la arquitectura del sistema\",\r\n  \"descripcion\": \"Crear y documentar la arquitectura de microservicios del sistema de gestión de tareas.\",\r\n  \"criteriosAceptacion\": \"Debe incluir un API Gateway, comunicación asíncrona y ser escalable.\",\r\n  \"fechaInicio\": \"2024-12-15\",\r\n  \"fechaFinalizacion\": \"2024-12-18\",\r\n  \"tiempoDesarrollo\": \"72H\",\r\n  \"estadoTarea\": \"Done\",\r\n  \"estado\": \"ACTIVO\",\r\n  \"usuario\": {\r\n    \"idUsuario\": 2\r\n  }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/tareas/23"
+					},
+					"response": []
+				},
+				{
+					"name": "Patch by Estado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtc2VycmFubyIsImlhdCI6MTczNDE5NzY3NiwiZXhwIjoxNzM0MTk5MTE2fQ.LJorXBBmt97DqDMRKOlkGObQkYltxNBaHR7omPWDHEo"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tareas/22/estado?nuevoEstado=Done",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tareas",
+								"22",
+								"estado"
+							],
+							"query": [
+								{
+									"key": "nuevoEstado",
+									"value": "Done"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mserrano\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/auth/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
