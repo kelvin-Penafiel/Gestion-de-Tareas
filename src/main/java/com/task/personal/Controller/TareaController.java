@@ -34,6 +34,13 @@ public class TareaController {
         return ResponseEntity.ok(tareaService.getAllTareas());
     }
 
+    // Obtener las tareas de un usuario específico
+    @GetMapping("/usuario/{idUsuario}")
+    public ResponseEntity<List<TareaEntity>> getTareasByUsuarioId(@PathVariable Long idUsuario) {
+        List<TareaEntity> tareas = tareaService.getTareasByUsuarioId(idUsuario);
+        return ResponseEntity.ok(tareas);
+    }
+
     // Actualizar una tarea existente
     @PutMapping("/{idTarea}")
     public ResponseEntity<TareaEntity> updateTarea(@PathVariable Long idTarea, @RequestBody TareaEntity tarea) {

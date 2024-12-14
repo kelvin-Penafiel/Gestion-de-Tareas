@@ -28,6 +28,11 @@ public class TareaService {
         return tareaRepository.findAll();
     }
 
+    // Método para obtener las tareas de un usuario
+    public List<TareaEntity> getTareasByUsuarioId(Long idUsuario) {
+        return tareaRepository.findByUsuarioId(idUsuario);
+    }
+
     // Eliminar una tarea por ID
     public void deleteTarea(Long idTarea) {
         tareaRepository.deleteById(idTarea);
