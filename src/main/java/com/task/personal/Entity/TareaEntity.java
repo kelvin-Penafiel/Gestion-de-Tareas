@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.time.Duration;
 
 @Data
 @AllArgsConstructor
@@ -37,7 +36,7 @@ public class TareaEntity {
     private LocalDate fechaFinalizacion;
 
     @Column(nullable = false)
-    private Duration tiempoDesarrollo;
+    private String tiempoDesarrollo;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
@@ -50,7 +49,13 @@ public class TareaEntity {
     @JoinColumn(name = "id_usuario", nullable = false)
     private UsuarioEntity usuario;
 
+
+
     public enum EstadoTarea {
-        BACKLOG, DOING, IN_REVIEW, DONE
+        Backlog,
+        Doing,
+        InReview,
+        Done;
     }
+
 }
