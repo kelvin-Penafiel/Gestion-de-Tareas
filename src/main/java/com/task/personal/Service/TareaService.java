@@ -1,5 +1,7 @@
 package com.task.personal.Service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.task.personal.Entity.TareaEntity;
 import com.task.personal.repository.TareaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,4 +50,10 @@ public class TareaService {
         }
         return Optional.empty();
     }
+
+    // Método para guardar varias tareas a la vez
+    public void saveTareas(List<TareaEntity> tareas) {
+        tareaRepository.saveAll(tareas);  // Guardar todas las tareas de una vez
+    }
+
 }
